@@ -1,0 +1,96 @@
+@use "../../libs/variables.scss";
+@use "../../libs/mixins.scss";
+
+.news__container {
+  @include mixins.container-decoration;
+
+  display: grid;
+  gap: 64px;
+}
+
+.news__title {
+  @include mixins.header-2;
+}
+
+.news__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 24px;
+
+  @include mixins.tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 34px;
+    column-gap: 20px;
+  }
+
+  @include mixins.desktop {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(348px, 1fr));
+    gap: 24px;
+  }
+}
+
+.news__card {
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+  padding: 30px 18px 70px 18px;
+  border-radius: 40px;
+  background-color: variables.$white-text;
+  border: 2px solid variables.$basic-green;
+  background-image: url("../img/news-card-decoration.svg");
+  background-repeat: no-repeat;
+  background-size: 76px 32px;
+  background-position: bottom 24px center;
+  flex: 0 1 348px;
+
+  @include mixins.tablet {
+    min-height: 494px;
+    padding: 30px 34px 104px 34px;
+    background-size: 96px 40px;
+    background-position: bottom 42px center;
+  }
+
+  @include mixins.desktop {
+    background-position: bottom 44px center;
+  }
+}
+
+.news__card-title {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  min-height: 68px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  padding: 0 15px;
+  margin-bottom: 20px;
+
+  @include mixins.tablet {
+    font-size: 28px;
+    line-height: 33px;
+    min-height: 100px;
+    margin-bottom: 24px;
+  }
+}
+
+.news__card-paragraph {
+  @include mixins.paragraph;
+
+  margin-bottom: 12px;
+
+  @include mixins.tablet {
+    margin-bottom: 16px;
+  }
+}
+
+.news__card-date {
+  @include mixins.paragraph;
+  text-align: right;
+}

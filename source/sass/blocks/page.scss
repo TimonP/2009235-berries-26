@@ -6,6 +6,7 @@
   padding: 0;
   margin: 0;
   height: 100%;
+
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -13,7 +14,7 @@
   /*Сглаживание текста*/
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
-  background-color: variables.$white;
+  background-color: variables.$white-text;
   color: variables.$black;
 }
 
@@ -22,11 +23,11 @@
   margin: 0 auto;
 
   @include mixins.mobile {
-    padding: 0 26px;
+    padding: 0 variables.$padding-container-mobile;
   }
 
   @include mixins.tablet {
-    padding: 0 26px;
+    padding: 0 variables.$padding-container-tablet;
   }
 
   @include mixins.desktop {

@@ -14,88 +14,60 @@ button.button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: variables.$basic-green;
+  background-color: variables.$basic-fiolet;
   color: variables.$white;
-  border-radius: 0;
-  box-shadow: none;
+  border-radius: 40px;
   // Text
   text-align: center;
   font-weight: 400;
-  text-transform: uppercase;
   text-decoration: none;
   transition: variables.$transition-all;
+  // Size
+  padding: 17px 25px;
+  box-shadow: 0 4px 4px rgba(88, 13, 101, 0.25);
 
   @include mixins.mobile {
-    // Size
-    padding: 7px 13px;
-    // Text
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 20px;
+    line-height: 23px;
+    padding-top: 16px;
   }
 
   @include mixins.tablet {
-    // Size
-    padding: 14px 26px;
-    // Text
-    font-size: 20px;
-    line-height: 20px;
+    padding-bottom: 18px;
+    font-size: 28px;
+    line-height: 33px;
   }
 
   &:hover {
-    background-color: variables.$basic-green-darknes;
+    background-color: variables.$special-color1;
   }
 
   &:active {
-    background-color: variables.$basic-green-darknes;
-    color: rgba(variables.$white, 0.3);
+    background-color: variables.$special-color2;
   }
 
   &:disabled {
-    background-color: variables.$special_grey-medium;
+    background-color: variables.$grey;
     cursor: default;
     pointer-events: none;
     user-select: none;
   }
 
-  &--center {
-    width: 100%;
-    max-width: 458px;
-    align-self: center;
-  }
-
   &--catalog {
-    @include mixins.mobile {
-      min-height: 40px;
-      padding: 10px;
-      font-size: 16px;
-      line-height: 20px;
-    }
+    padding: 14px 25px;
+    box-shadow: none;
+    min-height: 52px;
 
     @include mixins.tablet {
-      min-height: 40px;
-      padding: 10px;
-      font-size: 16px;
-      line-height: 20px;
-    }
-  }
-
-  &--show-more {
-    background-color: variables.$basic-gray;
-    color: variables.$special-grey-dark;
-
-    &:hover {
-      background-color: variables.$special-grey-lightnes;
-    }
-
-    &:active {
-      background-color: variables.$special-grey-lightnes;
-      color: rgba(variables.$special-grey-dark, 0.3);
+      padding: 14px 25px;
+      font-size: 20px;
+      line-height: 23px;
     }
   }
 }
 
 a.button:not([href]) {
-  background-color: variables.$special_grey-medium;
+  background-color: variables.$grey;
   cursor: default;
   pointer-events: none;
   user-select: none;

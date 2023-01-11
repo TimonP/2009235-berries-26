@@ -18,20 +18,11 @@
 @use "./blocks/main/main.scss";
 /*index*/
 @use "./blocks/main/introduction.scss";
-@use "./blocks/main/fit.scss";
-@use "./blocks/main/work.scss";
-@use "./blocks/main/live.scss";
-@use "./blocks/main/slider.scss";
+@use "./blocks/main/news.scss";
 /*form*/
-@use "./blocks/main/program.scss";
-@use "./blocks/main/form.scss";
 /*ctalog*/
 @use "./blocks/main/catalog.scss";
-@use "./blocks/main/accompaniment.scss";
 /*location*/
-@use "./blocks/main/contacts.scss";
-@use "./blocks/main/location.scss";
-@use "./blocks/main/map.scss";
 /*FOOTER*/
 @use "./blocks/footer/footer.scss";
 @use "./blocks/footer/social.scss";

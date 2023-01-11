@@ -8,24 +8,51 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
+  gap: 32px;
+
+  @include mixins.mobile {
+    gap: 20px;
+  }
 }
 
 .social__link {
-  width: 28px;
-  height: 22px;
   position: relative;
   display: block;
+  width: 40px;
+  aspect-ratio: 1 / 1;
   transition: variables.$transition-all;
+  border-radius: 50%;
+  border: 1px solid variables.$basic-green;
   background-color: transparent;
-  color: variables.$special-grey-medium;
+  color: variables.$basic-green;
+
+  @include mixins.mobile {
+    width: 32px;
+
+    &--telegram svg {
+      width: 18px;
+      height: 16px;
+    }
+
+    &--vkontakte svg {
+      width: 19px;
+      height: 11px;
+    }
+
+    &--youtube svg {
+      width: 18px;
+      height: 14px;
+    }
+  }
 
   &:hover {
-    color: variables.$basic-green;
+    border-color: variables.$special-color3;
+    color: variables.$special-color3;
   }
 
   &:active {
-    color: rgba(variables.$basic-green, 0.3);
+    border-color: variables.$special-color4;
+    color: variables.$special-color4;
   }
 }
 

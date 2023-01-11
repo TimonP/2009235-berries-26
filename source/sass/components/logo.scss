@@ -2,14 +2,32 @@
 @use "../libs/mixins.scss";
 
 .logo {
-  background-color: transparent;
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-shrink: 0;
+  color: variables.$basic-green;
+  fill: none;
+  transition: variables.$transition-all;
 
   &:hover {
-    opacity: 0.8;
+    color: variables.$special-color3;
   }
 
   &:active {
-    opacity: 0.6;
+    color: variables.$special-color4;
+  }
+}
+
+.logo__image {
+  @include mixins.mobile {
+    width: 36px;
+    height: 44px;
+  }
+}
+
+.logo__title {
+  @include mixins.mobile {
+    display: none;
   }
 }

@@ -2,38 +2,32 @@
 @use "../../libs/mixins.scss";
 
 .copyright__link {
-  font-family: "Arial", sans-serif;
-  color: variables.$special-grey-dark;
+  color: variables.$black;
   text-decoration: none;
   transition: variables.$transition-all;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 19px;
 
   @include mixins.mobile {
-    display: flex;
-    align-items: center;
+    font-size: 11px;
+    line-height: 13px;
+  }
+
+  &:hover {
+    color: variables.$special-color3;
   }
 
   &:active {
-    opacity: 0.3;
-  }
-
-  &:hover .copyright__link-icon,
-  &:active .copyright__link-icon {
     color: variables.$basic-green;
   }
 }
 
 .copyright__link-icon {
   vertical-align: middle;
-  color: variables.$special-grey-medium;
-  flex-shrink: 0;
+  margin-left: 8px;
 
   @include mixins.mobile {
-    margin-left: auto;
-  }
-
-  @include mixins.tablet {
-    margin-left: 19px;
+    width: 20px;
+    height: 24px;
   }
 }

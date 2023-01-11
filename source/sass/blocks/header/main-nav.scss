@@ -11,33 +11,44 @@
   margin: 0;
   right: 0;
   top: 0;
-  padding: 24px 20px;
-  width: 24px;
-  height: 16px;
+  padding: 0;
+  aspect-ratio: 1/1;
+  height: 100%;
   position: absolute;
   z-index: 2;
   transition: variables.$transition-all;
   color: variables.$black;
-  box-sizing: content-box;
+  margin-right: 17px;
 
-  &:hover {
-    opacity: 0.6;
+  &:hover::before,
+  &:hover::after {
+    background-color: variables.$special-color3;
   }
 
-  &:active {
-    opacity: 0.3;
+  &:active::before,
+  &:active::after {
+    background-color: variables.$special-color4;
   }
 
   &--closed::before {
     content: "";
     position: absolute;
-    top: 48%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%);
-    width: 24px;
-    height: 1.5px;
-    background-color: variables.$black;
-    box-shadow: 0 8px 0 0 variables.$black, 0 -8px 0 0 variables.$black;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 3px;
+    width: 45px;
+    height: 5px;
+    background-color: variables.$basic-green;
+    box-shadow: 0 12px 0 0 variables.$basic-green, 0 -12px 0 0 variables.$basic-green;
+  }
+
+  &--closed:hover::before {
+    box-shadow: 0 12px 0 0 variables.$special-color3, 0 -12px 0 0 variables.$special-color3;
+  }
+
+  &--closed:active::before {
+    box-shadow: 0 12px 0 0 variables.$special-color4, 0 -12px 0 0 variables.$special-color4;
   }
 
   &--opened::before,
@@ -45,9 +56,10 @@
     @include mixins.centered;
     content: "";
     position: absolute;
-    width: 25px;
-    height: 1.5px;
-    background-color: variables.$black;
+    width: 35px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: variables.$basic-green;
     box-shadow: none;
   }
 
@@ -76,6 +88,9 @@
     transform-origin: 0 0;
     visibility: hidden;
     transform: scaleY(0);
+    background-color: variables.$white-back;
+    padding: 16px 0;
+    min-height: 360px;
 
     &--opened {
       animation-name: menu-open;
@@ -100,7 +115,6 @@
 
   @include mixins.tablet {
     flex-wrap: wrap;
-    align-items: baseline;
     justify-content: flex-end;
   }
 }
@@ -115,8 +129,8 @@
       visibility: visible;
       transform: scaleY(1);
       position: static;
-      margin-left: -20px;
-      width: calc(100% + 40px);
+      margin-left: -(variables.$padding-container-mobile);
+      width: calc(100% + (variables.$padding-container-mobile * 2));
     }
   }
 }
