@@ -14,8 +14,12 @@
   /*Сглаживание текста*/
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
-  background-color: variables.$white-text;
+  background-color: variables.$white;
   color: variables.$black;
+
+  &--index {
+    background-color: variables.$white-text;
+  }
 }
 
 .page__container {

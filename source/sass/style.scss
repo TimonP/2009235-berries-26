@@ -7,6 +7,7 @@
 @use "./components/logo.scss";
 @use "./components/button.scss";
 @use "./components/input.scss";
+@use "./components/control.scss";
 /*blocks*/
 /*PAGE*/
 @use "./blocks/page.scss";
@@ -19,13 +20,15 @@
 /*index*/
 @use "./blocks/main/introduction.scss";
 @use "./blocks/main/news.scss";
-/*form*/
 /*ctalog*/
 @use "./blocks/main/catalog.scss";
 /*location*/
 @use "./blocks/main/contacts.scss";
 @use "./blocks/main/location.scss";
 @use "./blocks/main/map.scss";
+/*form*/
+@use "./blocks/main/order.scss";
+@use "./blocks/main/form.scss";
 /*FOOTER*/
 @use "./blocks/footer/footer.scss";
 @use "./blocks/footer/social.scss";

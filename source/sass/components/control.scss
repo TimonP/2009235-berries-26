@@ -1,0 +1,104 @@
+@use "../libs/variables.scss";
+@use "../libs/mixins.scss";
+
+.control {
+  position: relative;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.control__label {
+  cursor: pointer;
+
+  @include mixins.mobile {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  @include mixins.tablet {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.control__mark {
+  cursor: pointer;
+  position: relative;
+  flex: 0 0 auto;
+  aspect-ratio: 1 / 1;
+  width: 24px;
+  border: 2px solid variables.$basic-green;
+  border-radius: 5px;
+
+  &--checkbox::before {
+    @include mixins.centered;
+    width: 14px;
+    height: 11px;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml;charset=UTF-8,<svg viewBox='0 0 14 11' fill='%230F805D' xmlns='http://www.w3.org/2000/svg'><path d='M5 11 0 5.804 1.59 4.19 5 7.7 12.41 0 14 1.655 5 11Z'/></svg>");
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    display: none;
+  }
+
+  &--radio {
+    border-radius: 50%;
+    width: 21px;
+    margin: 0 1.5px;
+  }
+
+  &--radio::before {
+    @include mixins.centered;
+    aspect-ratio: 1 / 1;
+    width: 9px;
+    background-color: variables.$basic-green;
+    border-radius: 50%;
+    content: "";
+    display: none;
+  }
+}
+
+.control__input {
+  &:checked + .control__mark::before {
+    display: block;
+  }
+
+  &:hover + .control__mark,
+  &:focus + .control__mark {
+    border-color: variables.$special-color3;
+  }
+
+  &:checked:hover + .control__mark--checkbox::before,
+  &:checked:focus + .control__mark--checkbox::before {
+    background-image: url("data:image/svg+xml;charset=UTF-8,<svg viewBox='0 0 14 11' fill='%237BDB0A' xmlns='http://www.w3.org/2000/svg'><path d='M5 11 0 5.804 1.59 4.19 5 7.7 12.41 0 14 1.655 5 11Z'/></svg>");
+  }
+
+  &:checked:hover + .control__mark--radio::before,
+  &:checked:focus + .control__mark--radio::before {
+    background-color: variables.$special-color3;
+  }
+
+  &:active + .control__mark,
+  &:hover:active + .control__mark {
+    opacity: 0.6;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    user-select: none;
+  }
+
+  &:disabled ~ span {
+    cursor: default;
+  }
+
+  &:disabled + .control__mark {
+    border-color: variables.$grey;
+  }
+
+  &:disabled:checked + .control__mark--checkbox::before {
+    background-image: url("data:image/svg+xml;charset=UTF-8,<svg viewBox='0 0 14 11' fill='%238E9892' xmlns='http://www.w3.org/2000/svg'><path d='M5 11 0 5.804 1.59 4.19 5 7.7 12.41 0 14 1.655 5 11Z'/></svg>");
+  }
+}

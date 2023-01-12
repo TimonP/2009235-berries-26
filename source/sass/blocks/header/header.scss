@@ -67,4 +67,10 @@
     position: relative;
     z-index: 1;
   }
+
+  &--index {
+    pointer-events: none;
+    cursor: default;
+    user-select: none;
+  }
 }
