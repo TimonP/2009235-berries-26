@@ -32,7 +32,7 @@
   }
 
   &:active {
-    color: variables.$special-color4;
+    color: variables.$basic-green;
   }
 
   @include mixins.mobile {

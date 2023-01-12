@@ -23,6 +23,9 @@
 /*ctalog*/
 @use "./blocks/main/catalog.scss";
 /*location*/
+@use "./blocks/main/contacts.scss";
+@use "./blocks/main/location.scss";
+@use "./blocks/main/map.scss";
 /*FOOTER*/
 @use "./blocks/footer/footer.scss";
 @use "./blocks/footer/social.scss";

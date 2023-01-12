@@ -1,0 +1,104 @@
+@use "../../libs/variables.scss";
+@use "../../libs/mixins.scss";
+
+.location__container {
+  @include mixins.container-decoration;
+  display: flex;
+  flex-direction: column;
+
+  @include mixins.desktop {
+    display: grid;
+    grid-template-columns: calc(50% - 12px) auto;
+    grid-auto-flow: dense;
+    column-gap: 120px;
+  }
+
+  &::before {
+    @include mixins.mobile {
+      margin-bottom: 86px;
+    }
+
+    @include mixins.tablet {
+      margin-bottom: 72px;
+    }
+
+    @include mixins.desktop {
+      margin-bottom: 100px;
+    }
+  }
+}
+
+.location__title {
+  @include mixins.header-2;
+
+  @include mixins.mobile {
+    margin-bottom: 64px;
+  }
+
+  @include mixins.tablet {
+    margin-bottom: 72px;
+    padding: 0 155px;
+  }
+
+  @include mixins.desktop {
+    margin-top: 24px;
+    margin-bottom: 48px;
+    padding: 0;
+    margin-left: -100px;
+  }
+}
+
+.location__paragraph {
+  font-size: 20px;
+  line-height: 23px;
+  margin-bottom: 20px;
+
+  @include mixins.mobile {
+    text-align: center;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 34px;
+  }
+
+  @include mixins.tablet {
+    padding: 0 155px;
+  }
+
+  @include mixins.desktop {
+    padding: 0;
+  }
+}
+
+.location__contacts {
+  @include mixins.mobile {
+    margin-bottom: 24px;
+  }
+
+  @include mixins.tablet {
+    margin-bottom: 40px;
+    padding: 0 155px;
+  }
+
+  @include mixins.desktop {
+    margin-bottom: 0;
+    padding: 0;
+  }
+}
+
+.location__map {
+  @include mixins.mobile {
+    margin-left: -(variables.$padding-container-mobile);
+    margin-right: -(variables.$padding-container-mobile);
+  }
+
+  @include mixins.tablet {
+    margin-left: -(variables.$padding-container-tablet);
+    margin-right: -(variables.$padding-container-tablet);
+  }
+
+  @include mixins.desktop {
+    margin: 0;
+    grid-column: 1 / 2;
+    grid-row: 2 / 5;
+  }
+}

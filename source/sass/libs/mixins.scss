@@ -87,7 +87,7 @@
     background-position: center;
     align-self: center;
     justify-self: center;
-    grid-template-columns: 1 / -1;
+    grid-column: 1 / -1;
 
     @include mobile {
       width: 228px;

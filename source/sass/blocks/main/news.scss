@@ -6,6 +6,14 @@
 
   display: grid;
   gap: 64px;
+
+  @include mixins.tablet {
+    gap: 72px;
+  }
+
+  @include mixins.desktop {
+    gap: 98px;
+  }
 }
 
 .news__title {
@@ -64,6 +72,7 @@
   margin: 0;
   display: flex;
   align-items: center;
+  justify-content: center;
   min-height: 68px;
   text-align: center;
   font-weight: 400;
@@ -93,4 +102,5 @@
 .news__card-date {
   @include mixins.paragraph;
   text-align: right;
+  margin-top: auto;
 }
