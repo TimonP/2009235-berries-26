@@ -1,2 +1,92 @@
 @use "../../libs/variables.scss";
 @use "../../libs/mixins.scss";
+
+.order {
+  @include mixins.mobile {
+    padding-bottom: 24px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    height: 200px;
+    width: 100%;
+    background-image: url("../img/order-back@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/order-back@2x.jpg");
+    }
+
+    @include mixins.mobile {
+      height: 120px;
+      background-size: auto 200px;
+      background-position: 0 0;
+    }
+  }
+}
+
+.order__container {
+  @include mixins.container-decoration;
+  display: flex;
+  flex-direction: column;
+
+  &::before {
+    @include mixins.mobile {
+      margin-bottom: 50px;
+    }
+
+    @include mixins.tablet {
+      margin-bottom: 73px;
+    }
+
+    @include mixins.desktop {
+      margin-bottom: 62px;
+    }
+  }
+
+  @include mixins.mobile {
+    padding-top: 64px;
+  }
+
+  @include mixins.tablet {
+    padding-top: 100px;
+  }
+}
+
+.order__title {
+  @include mixins.header-2;
+  order: -1;
+
+  @include mixins.mobile {
+    margin-bottom: 32px;
+  }
+
+  @include mixins.tablet {
+    margin-bottom: 48px;
+  }
+}
+
+.order__paragraph {
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  padding: 0 25px;
+  margin: 0;
+  max-width: 540px;
+  order: -1;
+  margin-bottom: 31px;
+
+  @include mixins.tablet {
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+  }
+
+  @include mixins.desktop {
+    margin-bottom: 46px;
+  }
+}

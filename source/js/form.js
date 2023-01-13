@@ -3,6 +3,7 @@
 (() => {
   const input_required = document.querySelectorAll('.input[required]');
   const button_submit = document.querySelector('.button[type="submit"]');
+  const form_label = document.querySelectorAll('.form__label');
 
   if (!input_required.length) return;
 
@@ -23,5 +24,11 @@
         input.classList.remove('input--invalid');
       }
     })
+  })
+
+  form_label.forEach((label) => {
+    if (label.nextSibling.nextSibling.hasAttribute("required")) {
+      label.classList.add('form__label--required');
+    }
   })
 })();

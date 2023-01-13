@@ -54,6 +54,12 @@
   border-radius: 40px;
   background-color: variables.$white-text;
   box-shadow: 0 4px 4px rgba(88, 13, 101, 0.15);
+
+  @include mixins.mobile {
+    &:nth-of-type(n + 7) {
+      display: none;
+    }
+  }
 }
 
 .catalog__card-link {

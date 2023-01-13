@@ -65,9 +65,9 @@
           <p class="order__paragraph">Мы соберем для вас ягоды и&nbsp;доставим их в удобном для вас виде - свежими или замороженными</p>
 
           <form class="order__form form" action="https://echo.htmlacademy.ru/" method="get">
-            <fieldset class="form__group">
+            <fieldset class="form__group form__group--berries">
               <span class="form__legend">Выберите ягоды</span>
-              <ul class="form__group-list form__group-list--color">
+              <ul class="form__group-list form__group-list--berries">
                 <li class="form__group-item">
                   <label class="form__control control">
                     <input class="visually-hidden control__input" type="checkbox" name="cowberry">
@@ -152,7 +152,7 @@
 
             <fieldset class="form__group">
               <span class="form__legend">Вид хранения</span>
-              <ul class="form__group-list form__group-list--color">
+              <ul class="form__group-list form__group-list--keep">
                 <li class="form__group-item">
                   <label class="form__control control">
                     <input class="visually-hidden control__input" type="checkbox" name="fresh">
@@ -181,7 +181,7 @@
 
             <fieldset class="form__group">
               <span class="form__legend">Способ доставки</span>
-              <ul class="form__group-list">
+              <ul class="form__group-list form__group-list--get">
                 <li class="form__group-item">
                   <label class="form__control control">
                     <input class="visually-hidden control__input" type="radio" name="get_type" value="delivery" checked>
@@ -200,32 +200,35 @@
               </ul>
             </fieldset>
 
-            <fieldset class="form__group">
-              <span class="form__legend">Ваши контакты</span>
-              <div class="form__group-wrapper">
-                <label class="form__label" for="user-name">Имя</label>
-                <input class="input form__name" type="text" id="user-name" name="name" placeholder="Как к вам обращаться?" autocomplete="off" required>
-              </div>
+            <fieldset class="form__group form__group--contacts">
+              <span class="form__legend form__legend--contacts">Ваши контакты</span>
 
-              <div class="form__group-wrapper">
-                <label class="form__legend" for="user-telephone">Телефон</label>
-                <input class="input form__telephone" type="tel" id="user-telephone" name="telephone" placeholder="+7 ХХХ ХХХ ХХ ХХ" pattern="+7 [\(]\d{3}[\)] [0-9]{3}-[0-9]{2}-[0-9]{2}" autocomplete="off" required>
-              </div>
+              <ul class="form__group-list form__group-list--contacts">
+                <li class="form__group-wrapper">
+                  <label class="form__label" for="user-name">Имя</label>
+                  <input class="input form__name" type="text" id="user-name" name="name" placeholder="Как к вам обращаться?" autocomplete="off" required>
+                </li>
 
-              <div class="form__group-wrapper">
-                <label class="form__legend" for="user-email">Email</label>
-                <input class="input form__email" type="email" id="user-email" name="e-mail" placeholder="Ваш email" autocomplete="off" required>
-              </div>
+                <li class="form__group-wrapper">
+                  <label class="form__label" for="user-telephone">Телефон</label>
+                  <input class="input form__telephone" type="tel" id="user-telephone" name="telephone" placeholder="+7 xxx xxx xx xx" pattern="+7 [\(]\d{3}[\)] [0-9]{3}-[0-9]{2}-[0-9]{2}" autocomplete="off" required>
+                </li>
 
-              <div class="form__group-wrapper">
-                <label class="form__label" for="user-adderss">Адрес</label>
-                <input class="input form__family" type="text" id="user-adderss" name="adderss" placeholder="Адрес в Санкт-Петербурге" autocomplete="off" required>
-              </div>
+                <li class="form__group-wrapper">
+                  <label class="form__label" for="user-email">Email</label>
+                  <input class="input form__email" type="email" id="user-email" name="e-mail" placeholder="Ваш email" autocomplete="off" required>
+                </li>
 
-              <div class="form__group-wrapper">
-                <label class="form__legend form__legend--textarea" for="user-message">Пожелания к заказу</label>
-                <textarea class="input input--textarea form__textarea" rows="3" id="user-message" name="message" placeholder="Чем мы можем вам помочь?" autocomplete="off"></textarea>
-              </div>
+                <li class="form__group-wrapper form__group-wrapper--adderss">
+                  <label class="form__label" for="user-adderss">Адрес</label>
+                  <input class="input form__family" type="text" id="user-adderss" name="adderss" placeholder="Адрес в Санкт-Петербурге" autocomplete="off" required>
+                </li>
+
+                <li class="form__group-wrapper form__group-wrapper--message">
+                  <label class="form__label" for="user-message">Пожелания к заказу</label>
+                  <textarea class="input input--textarea form__textarea" rows="3" id="user-message" name="message" placeholder="Чем мы можем вам помочь?" autocomplete="off"></textarea>
+                </li>
+              </ul>
             </fieldset>
 
             <button class="form__button button" type="submit">Заказать</button>
