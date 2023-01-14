@@ -64,6 +64,7 @@
   position: relative;
   width: 32px;
   aspect-ratio: 1 / 1;
+  flex-shrink: 0;
 
   & svg {
     @include mixins.centered;

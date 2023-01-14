@@ -2,7 +2,7 @@
 @use "../../libs/mixins.scss";
 
 .introduction {
-  background-color: #fafbfd;
+  background-color: #ced7e0;
   background-image: url("../img/introduction-back-tablet@1x.jpg");
   background-repeat: no-repeat;
   background-size: 235% auto;
@@ -17,7 +17,6 @@
   }
 
   @include mixins.tablet {
-    min-height: 924px;
     background-size: 118% auto;
     background-position: 0 0;
   }
@@ -36,7 +35,7 @@
 
 .introduction__container {
   @include mixins.mobile {
-    padding: 70px 28px 192px 28px;
+    padding: 70px 28px 203px 28px;
   }
 
   @include mixins.tablet {
