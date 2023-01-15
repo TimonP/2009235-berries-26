@@ -18,7 +18,7 @@
   z-index: 2;
   transition: variables.$transition-all;
   color: variables.$black;
-  margin-right: 17px;
+  margin-right: 10px;
 
   &:hover::before,
   &:hover::after {
@@ -34,7 +34,7 @@
     content: "";
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 40%;
     transform: translateX(-50%) translateY(-50%);
     border-radius: 3px;
     width: 45px;

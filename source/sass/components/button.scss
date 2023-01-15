@@ -19,6 +19,7 @@ button.button {
   border-radius: 40px;
   // Text
   text-align: center;
+  letter-spacing: 0.05em;
   font-weight: 400;
   text-decoration: none;
   transition: variables.$transition-all;
@@ -30,6 +31,7 @@ button.button {
     font-size: 20px;
     line-height: 23px;
     padding-top: 16px;
+    padding-right: 30px;
   }
 
   @include mixins.tablet {

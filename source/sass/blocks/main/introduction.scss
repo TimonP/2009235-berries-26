@@ -3,13 +3,13 @@
 
 .introduction {
   background-color: #ced7e0;
-  background-image: url("../img/introduction-back-tablet@1x.jpg");
+  background-image: url("../img/introduction-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-size: 235% auto;
-  background-position: -6px 0;
+  background-size: cover;
+  background-position: center;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/introduction-back-tablet@2x.jpg");
+    background-image: url("../img/introduction-back-mobile@2x.jpg");
   }
 
   @include mixins.mobile {
@@ -17,15 +17,19 @@
   }
 
   @include mixins.tablet {
-    background-size: 118% auto;
-    background-position: 0 0;
+    background-image: url("../img/introduction-back-tablet@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/introduction-back-tablet@2x.jpg");
+    }
   }
 
   @include mixins.desktop {
     min-height: 800px;
     background-image: url("../img/introduction-back-desktop@1x.jpg");
-    background-size: cover;
-    background-position: center;
+    background-position: 103%  calc(50% - 3px);
+    background-color: #fafdfe;
+
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/introduction-back-desktop@2x.jpg");
@@ -35,15 +39,15 @@
 
 .introduction__container {
   @include mixins.mobile {
-    padding: 70px 28px 203px 28px;
+    padding: 70px 28px 192px 28px;
   }
 
   @include mixins.tablet {
-    padding: 142px 22px 473px 214px;
+    padding: 143px 22px 420px 213px;
   }
 
   @include mixins.desktop {
-    padding: 172px 0 249px 393px;
+    padding: 172px 0 252px 383px;
   }
 }
 
@@ -51,17 +55,16 @@
   @include mixins.header-2;
 
   @include mixins.mobile {
-    margin-bottom: 32px;
+    margin-bottom: 30px;
   }
 
   @include mixins.tablet {
-    margin-bottom: 48px;
+    margin-bottom: 45px;
     text-align: left;
   }
 
   @include mixins.desktop {
     margin-bottom: 52px;
-    margin-left: -15px;
   }
 }
 
@@ -77,10 +80,13 @@
   @include mixins.mobile {
     gap: 12px;
     padding: 0 28px;
+    margin-bottom: 56px;
   }
 
   @include mixins.desktop {
     margin-bottom: 52px;
+    margin-left: 23px;
+    max-width: 500px;
   }
 }
 
@@ -92,6 +98,10 @@
   @include mixins.mobile {
     font-size: 16px;
     line-height: 19px;
+
+    &:last-of-type {
+      margin-top: 5px;
+    }
   }
 
   @include mixins.tablet {
@@ -120,6 +130,10 @@
 
   &--delivery::before {
     background-image: url("../img/delivery.svg");
+
+    @include mixins.mobile {
+      background-position: center 80%;
+    }
   }
 }
 
@@ -130,5 +144,9 @@
 
   @include mixins.tablet {
     width: 336px;
+  }
+
+  @include mixins.desktop {
+    margin-left: 37px;
   }
 }

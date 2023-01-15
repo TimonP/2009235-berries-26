@@ -15,15 +15,25 @@
 
   &::before {
     @include mixins.mobile {
-      margin-bottom: 60px;
+      margin-bottom: 62px;
     }
 
     @include mixins.tablet {
-      margin-bottom: 72px;
+      margin-bottom: 73px;
     }
 
     @include mixins.desktop {
       margin-bottom: 100px;
+    }
+  }
+
+  &--index {
+    @include mixins.tablet {
+      margin-top: 10px;
+    }
+
+    @include mixins.desktop {
+      margin-top: 0;
     }
   }
 
@@ -50,11 +60,12 @@
     margin-top: 24px;
     margin-bottom: 48px;
     padding: 0;
-    margin-left: -100px;
+    margin-left: -95px;
   }
 }
 
 .location__paragraph {
+  margin: 0;
   font-size: 20px;
   line-height: 23px;
   margin-bottom: 20px;
@@ -86,7 +97,7 @@
   }
 
   @include mixins.desktop {
-    margin-bottom: 0;
+    margin-bottom: 18px;
     padding: 0;
   }
 }

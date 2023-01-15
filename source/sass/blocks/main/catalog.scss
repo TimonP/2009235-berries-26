@@ -2,6 +2,10 @@
 @use "../../libs/mixins.scss";
 
 .catalog__container {
+  @include mixins.mobile {
+    padding: 0 28px;
+  }
+
   @include mixins.tablet {
     padding: 0 94px;
   }
@@ -93,6 +97,7 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
+  object-position: 63%;
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
 }

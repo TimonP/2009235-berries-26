@@ -5,6 +5,7 @@
   position: relative;
   clip-path: inset(0 0 0 round 40px);
   height: 372px;
+  min-height: 372px;
 
   @include mixins.desktop {
     height: 100%;

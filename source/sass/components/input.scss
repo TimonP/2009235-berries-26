@@ -52,14 +52,6 @@
 
   &--textarea {
     resize: none;
-
-    @include mixins.mobile {
-      min-height: 124px;
-    }
-
-    @include mixins.tablet {
-      min-height: 144px;
-    }
   }
 
   &::-webkit-contacts-auto-fill-button {

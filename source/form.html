@@ -25,7 +25,7 @@
       <div class="page__container header__container">
         <a class="header__logo logo" href="index.html">
           <span class="visually-hidden">Магазин «Ягоды»</span>
-          <svg class="logo__image" width="42" height="50" raria-hidden="true" focusable="false">
+          <svg class="logo__image" width="42" height="50" aria-hidden="true" focusable="false">
             <use href="img/sprite.svg#logo-image"></use>
           </svg>
           <svg class="logo__title" width="65" height="36" aria-hidden="true" focusable="false">
@@ -154,7 +154,7 @@
               <span class="form__legend">Вид хранения</span>
               <ul class="form__group-list form__group-list--keep">
                 <li class="form__group-item">
-                  <label class="form__control control">
+                  <label class="form__control form__control--keep control">
                     <input class="visually-hidden control__input" type="checkbox" name="fresh">
                     <span class="control__mark control__mark--checkbox"></span>
                     <span class="control__label">свежие ягоды</span>
@@ -162,7 +162,7 @@
                 </li>
 
                 <li class="form__group-item">
-                  <label class="form__control control">
+                  <label class="form__control form__control--keep control">
                     <input class="visually-hidden control__input" type="checkbox" name="freezing">
                     <span class="control__mark control__mark--checkbox"></span>
                     <span class="control__label">замороденые ягоды</span>
@@ -183,10 +183,10 @@
               <span class="form__legend">Способ доставки</span>
               <ul class="form__group-list form__group-list--get">
                 <li class="form__group-item">
-                  <label class="form__control control">
+                  <label class="form__control form__control--delivery control">
                     <input class="visually-hidden control__input" type="radio" name="get_type" value="delivery" checked>
                     <span class="control__mark control__mark--radio"></span>
-                    <span class="control__label">Доставка<br> (по СПБ в пределах КАД)</span>
+                    <span class="control__label">Доставка<br> (по СПБ в пределах &nbsp;КАД)</span>
                   </label>
                 </li>
 
@@ -221,12 +221,12 @@
 
                 <li class="form__group-wrapper form__group-wrapper--adderss">
                   <label class="form__label" for="user-adderss">Адрес</label>
-                  <input class="input form__family" type="text" id="user-adderss" name="adderss" placeholder="Адрес в Санкт-Петербурге" autocomplete="off" required>
+                  <textarea class="input input--textarea form__adderss" rows="1" id="user-adderss" name="adderss" placeholder="Адрес в Санкт-Петербурге" autocomplete="off" required></textarea>
                 </li>
 
                 <li class="form__group-wrapper form__group-wrapper--message">
                   <label class="form__label" for="user-message">Пожелания к заказу</label>
-                  <textarea class="input input--textarea form__textarea" rows="3" id="user-message" name="message" placeholder="Чем мы можем вам помочь?" autocomplete="off"></textarea>
+                  <textarea class="input input--textarea form__message" rows="3" id="user-message" name="message" placeholder="Чем мы можем вам помочь?" autocomplete="off"></textarea>
                 </li>
               </ul>
             </fieldset>
@@ -238,7 +238,7 @@
 
       <section class="location">
         <div class="page__container location__container">
-          <h2 class="location__title">Где забрать ягоды?</h2>
+          <h2 class="location__title">Где забрать&nbsp; ягоды?</h2>
           <p class="location__paragraph">Забери ягоды с нашего склада по&nbsp;адресу:</p>
 
           <ul class="location__contacts contacts">
@@ -287,7 +287,7 @@
       <div class="page__container footer__container">
         <a class="footer__logo logo" href="#">
           <span class="visually-hidden">Магазин «Ягоды»</span>
-          <svg class="logo__image" width="42" height="50" raria-hidden="true" focusable="false">
+          <svg class="logo__image" width="42" height="50" aria-hidden="true" focusable="false">
             <use href="img/sprite.svg#logo-image"></use>
           </svg>
           <svg class="logo__title" width="65" height="36" aria-hidden="true" focusable="false">

@@ -17,6 +17,9 @@
   });
 
   function init() {
+    var desktop_width = 1300;
+    var tablet_width = 768;
+
     var myMap = new ymaps.Map('map', {
       center: [59.913374, 30.331391],
       zoom: 14,
@@ -37,7 +40,17 @@
     start();
     window.addEventListener('resize', start);
     function start() {
-      myMap.setCenter([59.913374, 30.331391], 14,);
+      if (document.documentElement.clientWidth >= desktop_width) {
+        myMap.setCenter([59.913374, 30.331391], 14,);
+      }
+
+      else if (document.documentElement.clientWidth < desktop_width && document.documentElement.clientWidth >= tablet_width) {
+        myMap.setCenter([59.913374, 30.331391], 14.5,);
+      }
+
+      else {
+        myMap.setCenter([59.913374, 30.331391], 14,);
+      }
     }
   }
 })();

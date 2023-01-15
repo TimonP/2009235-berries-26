@@ -52,18 +52,28 @@
   background-image: url("../img/news-card-decoration.svg");
   background-repeat: no-repeat;
   background-size: 76px 32px;
-  background-position: bottom 24px center;
+  background-position: bottom 22px center;
   flex: 0 1 348px;
 
   @include mixins.tablet {
     min-height: 494px;
-    padding: 30px 34px 104px 34px;
+    padding: 30px 34px 103px 34px;
     background-size: 96px 40px;
-    background-position: bottom 42px center;
+    background-position: bottom 40px center;
+
+    &:last-child:nth-child(2n+1) {
+      margin-right: 10px;
+    }
   }
 
   @include mixins.desktop {
-    background-position: bottom 44px center;
+    min-height: 492px;
+    background-position: bottom 42px center;
+    padding-top: 28px;
+
+    &:last-child:nth-child(2n+1) {
+      margin-right: 0;
+    }
   }
 }
 
@@ -85,6 +95,12 @@
     line-height: 33px;
     min-height: 100px;
     margin-bottom: 24px;
+  }
+
+  @include mixins.desktop {
+    padding: 0;
+    margin-right: -5px;
+    margin-left: -5px;
   }
 }
 

@@ -59,13 +59,17 @@
 
 .header__logo {
   flex-shrink: 0;
+  margin-left: 8px;
 
   @include mixins.mobile {
-    margin-left: 10px;
     padding-top: 13px;
     padding-bottom: 11px;
     position: relative;
     z-index: 1;
+  }
+
+  @include mixins.tablet {
+    margin-top: 1px;
   }
 
   &--index {

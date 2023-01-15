@@ -11,12 +11,8 @@
   }
 
   @include mixins.desktop {
-    margin-right: -14px;
+    margin-right: 22px;
   }
-}
-
-.site-list__item {
-  display: block;
 }
 
 .site-list__item a {
@@ -36,18 +32,28 @@
   }
 
   @include mixins.mobile {
-    padding: 16px 40px;
+    padding: 15px 40px;
   }
 
   @include mixins.tablet {
-    padding: 19px 8px;
-    padding-top: 18px;
-    min-width: 112px;
+    padding: 16px 8px;
+    padding-top: 21px;
+    min-width: 128px;
   }
 
   @include mixins.desktop {
-    padding: 19px 14px;
-    padding-top: 18px;
-    min-width: 132px;
+    padding: 16px 14px;
+    padding-top: 21px;
+    min-width: 160px;
+  }
+}
+
+.site-list__item {
+  display: block;
+
+  &--active a {
+    @include mixins.desktop {
+      color: variables.$basic-green;
+    }
   }
 }

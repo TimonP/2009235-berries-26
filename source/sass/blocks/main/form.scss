@@ -10,7 +10,7 @@
   }
 
   @include mixins.tablet {
-    gap: 48px;
+    gap: 50px;
     padding: 0 46px;
   }
 
@@ -31,11 +31,13 @@
 
     &--contacts {
       padding: 0;
+      margin-top: -5px;
     }
   }
 
   @include mixins.desktop {
     padding: 0;
+    margin-top: 0;
   }
 }
 
@@ -109,7 +111,7 @@
     @include mixins.tablet {
       column-gap: 67px;
       row-gap: 24px;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, 117px);
       grid-template-rows: repeat(4, 1fr);
     }
 
@@ -125,10 +127,11 @@
 
     @include mixins.tablet {
       grid-auto-flow: column;
-      column-gap: 67px;
-      row-gap: 22px;
+      column-gap: 56px;
+      row-gap: 24px;
       grid-template-columns: repeat(2, 221px);
       grid-template-rows: repeat(2, 1fr);
+      margin-bottom: -2px;
     }
 
     @include mixins.desktop {
@@ -181,12 +184,52 @@
 }
 
 .form__button {
+  @include mixins.mobile {
+    margin-right: 4px;
+  }
+
   @include mixins.tablet {
     width: 336px;
     align-self: center;
+    margin-top: -10px;
   }
 
   @include mixins.desktop {
+    margin-top: 0;
     margin-right: 48px;
+  }
+}
+
+.form__control {
+  &--delivery {
+    @include mixins.mobile {
+      padding-right: 45px;
+    }
+  }
+
+  &--keep {
+    @include mixins.tablet {
+      gap: 24px;
+    }
+
+    @include mixins.desktop {
+      gap: 12px;
+    }
+  }
+}
+
+.form__adderss {
+  @include mixins.mobile {
+    min-height: 88px;
+  }
+}
+
+.form__message {
+  @include mixins.mobile {
+    min-height: 124px;
+  }
+
+  @include mixins.tablet {
+    min-height: 144px;
   }
 }
