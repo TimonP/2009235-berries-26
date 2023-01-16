@@ -11,13 +11,13 @@
     display: block;
     height: 200px;
     width: 100%;
-    background-image: url("../img/order-back@1x.jpg");
+    background-image: url("../img/order-background@1x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 center;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/order-back@2x.jpg");
+      background-image: url("../img/order-background@2x.jpg");
     }
 
     @include mixins.mobile {

@@ -3,13 +3,13 @@
 
 .introduction {
   background-color: #ced7e0;
-  background-image: url("../img/introduction-back-mobile@1x.jpg");
+  background-image: url("../img/introduction-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/introduction-back-mobile@2x.jpg");
+    background-image: url("../img/introduction-background-mobile@2x.jpg");
   }
 
   @include mixins.mobile {
@@ -17,21 +17,21 @@
   }
 
   @include mixins.tablet {
-    background-image: url("../img/introduction-back-tablet@1x.jpg");
+    background-image: url("../img/introduction-background-tablet@1x.jpg");
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/introduction-back-tablet@2x.jpg");
+      background-image: url("../img/introduction-background-tablet@2x.jpg");
     }
   }
 
   @include mixins.desktop {
     min-height: 800px;
-    background-image: url("../img/introduction-back-desktop@1x.jpg");
+    background-image: url("../img/introduction-background-desktop@1x.jpg");
     background-color: #fafdfe;
 
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/introduction-back-desktop@2x.jpg");
+      background-image: url("../img/introduction-background-desktop@2x.jpg");
     }
   }
 }
