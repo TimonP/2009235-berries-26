@@ -70,9 +70,10 @@
 
   @include mixins.tablet {
     margin-top: 1px;
+    margin-left: 8px;
   }
 
-  @include mixins.tablet {
+  @include mixins.desktop {
     margin-left: 9px;
   }
 
