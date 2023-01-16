@@ -72,6 +72,10 @@
     margin-top: 1px;
   }
 
+  @include mixins.tablet {
+    margin-left: 9px;
+  }
+
   &--index {
     pointer-events: none;
     cursor: default;

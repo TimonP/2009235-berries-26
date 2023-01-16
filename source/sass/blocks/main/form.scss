@@ -15,9 +15,9 @@
   }
 
   @include mixins.desktop {
-    gap: 47px;
-    padding: 0 168px;
-    padding-right: 120px;
+    gap: 48px;
+    padding: 0 192px;
+    padding-right: 142px;
   }
 }
 
@@ -38,6 +38,14 @@
   @include mixins.desktop {
     padding: 0;
     margin-top: 0;
+
+    &--berries {
+      margin-bottom: 10px;
+    }
+
+    &--contacts {
+      margin-top: -1px;
+    }
   }
 }
 
@@ -174,7 +182,7 @@
   }
 
   @include mixins.desktop {
-    padding-right: 240px;
+    padding-right: 168px;
   }
 }
 
@@ -196,17 +204,23 @@
 
   @include mixins.desktop {
     margin-top: 0;
-    margin-right: 48px;
+    margin-right: 57px;
+  }
+}
+
+.form__control--delivery {
+  @include mixins.mobile {
+    padding-right: 45px;
+  }
+
+  @include mixins.desktop {
+    & br:last-of-type {
+      display: none;
+    }
   }
 }
 
 .form__control {
-  &--delivery {
-    @include mixins.mobile {
-      padding-right: 45px;
-    }
-  }
-
   &--keep {
     @include mixins.tablet {
       gap: 24px;
