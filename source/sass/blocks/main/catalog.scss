@@ -115,8 +115,7 @@
   min-width: 116px;
   display: flex;
 
-  &::after {
-    content: " за 1 кг";
+  & span {
     margin-left: auto;
     flex-shrink: 0;
   }

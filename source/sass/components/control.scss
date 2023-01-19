@@ -65,15 +65,18 @@
     display: block;
   }
 
-  &:hover + .control__mark {
+  &:hover + .control__mark,
+  &:focus + .control__mark {
     border-color: variables.$special-color3;
   }
 
-  &:checked:hover + .control__mark--checkbox::before {
+  &:checked:hover + .control__mark--checkbox::before,
+  &:checked:focus + .control__mark--checkbox::before {
     background-image: url("data:image/svg+xml;charset=UTF-8,<svg viewBox='0 0 14 11' fill='%237BDB0A' xmlns='http://www.w3.org/2000/svg'><path d='M5 11 0 5.804 1.59 4.19 5 7.7 12.41 0 14 1.655 5 11Z'/></svg>");
   }
 
-  &:checked:hover + .control__mark--radio::before {
+  &:checked:hover + .control__mark--radio::before,
+  &:checked:focus + .control__mark--radio::before {
     background-color: variables.$special-color3;
   }
 
